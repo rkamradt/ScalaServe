@@ -10,7 +10,7 @@ import akka.http.scaladsl.server.Route
 import akka.stream.ActorMaterializer
 
 //#main-class
-object QuickstartServer extends App with UserRoutes {
+object QuickstartServer extends App with ClientRoutes {
 
   // set up ActorSystem and other dependencies here
   //#main-class
@@ -23,7 +23,7 @@ object QuickstartServer extends App with UserRoutes {
 
   //#main-class
   // from the UserRoutes trait
-  lazy val routes: Route = userRoutes
+  lazy val routes: Route = clientRoutes
   //#main-class
 
   //#http-server
